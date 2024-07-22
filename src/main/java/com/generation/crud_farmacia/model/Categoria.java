@@ -19,6 +19,10 @@ public class Categoria {
 	@NotBlank(message = "O atributo nome é obrigatório.")
 	@Size(max = 100, message = "O atributo nome deve conter no máximo 100 caracteres.")
 	private String nome;
+	
+	@NotBlank(message = "O atributo descricao é obrigatório.")
+	@Size(max = 500, message = "O atributo descricao deve conter no máximo 500 caracteres.")
+	private String descricao;
 
 	public Long getId() {
 		return id;
@@ -35,6 +39,12 @@ public class Categoria {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 }
