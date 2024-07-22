@@ -37,10 +37,11 @@ public class Produto {
 	private BigDecimal preco;
 	
 	@NotNull(message = "O atributo estoque é obrigatório.")
-	private int estoque;
+	private Integer estoque;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
+	@NotNull(message = "O atributo categoria é obrigatório.")
 	private Categoria categoria;
 
 	public Long getId() {
